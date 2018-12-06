@@ -20,7 +20,14 @@ namespace Calculations
             Console.WriteLine("3. Multiplication");
             Console.WriteLine("4. Division");
             Console.Write("Enter the Operation you want to perform : ");
-            option = Convert.ToChar(Console.ReadLine());
+            var line = Console.ReadLine();
+            if (line == null)
+            {
+                Console.WriteLine("Invalid input!");
+                return;
+            }
+
+            var option = Convert.ToChar(line);
             switch (option)
             {
             case '1':
