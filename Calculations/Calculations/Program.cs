@@ -9,11 +9,11 @@ namespace Calculations
     {
         static void Main(string[] args)
         {
-            double Num1, Num2, result;
+            double result;
             Console.Write("Enter the First Number : ");
-            Num1 = Convert.ToDouble(Console.ReadLine());
+            var num1 = Convert.ToDouble(Console.ReadLine());
             Console.Write("Enter the Second Number : ");
-            Num2 = Convert.ToDouble(Console.ReadLine());
+            var num2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Main Menu");
             Console.WriteLine("1. Addition");
             Console.WriteLine("2. Subtraction");
@@ -24,25 +24,25 @@ namespace Calculations
             switch (option)
             {
             case '1':
-                result = Num1 + Num2;
+                result = num1 + num2;
                 Console.WriteLine("The result of Addition is : {0}", result);
                 break;
             case '2':
-                result = Num1 - Num2;
+                result = num1 - num2;
                 Console.WriteLine("The result of Subtraction is : {0}", result);
                 break;
             case '3':
-                result = Num1 * Num2;
+                result = num1 * num2;
                 Console.WriteLine("The result of Multiplication is : {0}", result);
                 break;
             case '4':
-                if (Num2 == 0)
+                if (num2 == 0)
                 {
                     Console.WriteLine("Invalid input data!");
                     break;
                 }
 
-                result = Num1 / Num2;
+                result = num1 / num2;
                 Console.WriteLine("The result of Division is : {0}", result);
                 break;
             default:
