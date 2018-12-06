@@ -22,6 +22,7 @@ namespace Calculations
             Console.WriteLine("3. Multiplication");
             Console.WriteLine("4. Division");
             Console.WriteLine("5. Exponentiation");
+            Console.WriteLine("6. Square root");
             Console.Write("Enter the Operation you want to perform : ");
             option = Convert.ToChar(Console.ReadLine());
             switch (option)
@@ -50,6 +51,10 @@ namespace Calculations
             case '5':
                 result = Math.Pow(Num1, Num2);
                 Console.WriteLine("The result of Exponentiation is : {0}", result);
+                break;
+            case '6':
+                result = Math.Sqrt(Num1);
+                Console.WriteLine("The result of Square Root Operation is : {0}", result);
                 break;
             default:
                 Console.WriteLine("Invalid Option");
