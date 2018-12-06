@@ -21,6 +21,7 @@ namespace Calculations
             Console.WriteLine("2. Subtraction");
             Console.WriteLine("3. Multiplication");
             Console.WriteLine("4. Division");
+            Console.WriteLine("5. Exponentiation");
             Console.Write("Enter the Operation you want to perform : ");
             option = Convert.ToChar(Console.ReadLine());
             switch (option)
@@ -45,6 +46,10 @@ namespace Calculations
                 }
                 result = 1.0f * Num1 / Num2;
                 Console.WriteLine("The result of Division is : {0}", result);
+                break;
+            case '5':
+                result = Math.Pow(Num1, Num2);
+                Console.WriteLine("The result of Exponentiation is : {0}", result);
                 break;
             default:
                 Console.WriteLine("Invalid Option");
