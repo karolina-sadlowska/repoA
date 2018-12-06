@@ -9,12 +9,11 @@ namespace Calculations
     {
         static void Main(string[] args)
         {
-            int Num1, Num2, result;
-            char option;
+            double Num1, Num2, result;
             Console.Write("Enter the First Number : ");
-            Num1 = Convert.ToInt32(Console.ReadLine());
+            Num1 = Convert.ToDouble(Console.ReadLine());
             Console.Write("Enter the Second Number : ");
-            Num2 = Convert.ToInt32(Console.ReadLine());
+            Num2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Main Menu");
             Console.WriteLine("1. Addition");
             Console.WriteLine("2. Subtraction");
