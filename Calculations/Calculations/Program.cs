@@ -37,6 +37,12 @@ namespace Calculations
                 Console.WriteLine("The result of Multiplication is : {0}", result);
                 break;
             case '4':
+                if (Num2 == 0)
+                {
+                    Console.WriteLine("Invalid input data!");
+                    break;
+                }
+
                 result = Num1 / Num2;
                 Console.WriteLine("The result of Division is : {0}", result);
                 break;
