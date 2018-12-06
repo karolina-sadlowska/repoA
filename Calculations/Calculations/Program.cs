@@ -9,7 +9,8 @@ namespace Calculations
     {
         static void Main(string[] args)
         {
-            int Num1, Num2, result;
+            int Num1, Num2;
+            double result;
             char option;
             Console.Write("Enter the First Number : ");
             Num1 = Convert.ToInt32(Console.ReadLine());
@@ -42,8 +43,7 @@ namespace Calculations
                     Console.WriteLine("Invalid input data!");
                     break;
                 }
-
-                result = Num1 / Num2;
+                result = 1.0f * Num1 / Num2;
                 Console.WriteLine("The result of Division is : {0}", result);
                 break;
             default:
