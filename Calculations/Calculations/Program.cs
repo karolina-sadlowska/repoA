@@ -7,27 +7,54 @@ namespace Calculations
 {
     class Program
     {
-        static void Main(string[] args)
+        public static bool ProvideParameters(out double m, out double n)
         {
-            double result;
             Console.Write("Enter the First Number : ");
-            var num1 = Convert.ToDouble(Console.ReadLine());
+            m = Convert.ToDouble(Console.ReadLine());
             Console.Write("Enter the Second Number : ");
-            var num2 = Convert.ToDouble(Console.ReadLine());
+            n = Convert.ToDouble(Console.ReadLine());
+
+            return true;
+        }
+
+        public static bool ProvideOperation(out char operation)
+        {
             Console.WriteLine("Main Menu");
             Console.WriteLine("1. Addition");
             Console.WriteLine("2. Subtraction");
             Console.WriteLine("3. Multiplication");
             Console.WriteLine("4. Division");
             Console.Write("Enter the Operation you want to perform : ");
+
             var line = Console.ReadLine();
             if (line == null)
             {
                 Console.WriteLine("Invalid input!");
+                operation = '';
+                return false;
+            }
+
+            operation = Convert.ToChar(line);
+
+            return true;
+        }
+
+        static void Main(string[] args)
+        {
+            double result;
+
+            if (!ProvideParameters(out var num1, out var num2))
+            {
+                Console.WriteLine("Could not read input parameters!");
                 return;
             }
 
-            var option = Convert.ToChar(line);
+            if (!ProvideOperation(out var option))
+            {
+                Console.WriteLine("Could not read operation kind!");
+                return;
+            }
+
             switch (option)
             {
             case '1':
