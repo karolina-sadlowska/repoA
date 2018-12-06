@@ -2,9 +2,6 @@
  * C# Program to Perform all Basic Arithmetic Operations
  */
 using System;
-using System.Collections.Generic;
-using System.Text;
-namespace Program
 
 namespace Calculations
 {
